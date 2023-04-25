@@ -1,0 +1,144 @@
+/* Mobile & Tablet */
+@media (max-width: 1023px) {
+    .navbar,
+    .search__logo-link,
+    .search__suggest-list,
+    .content-sort-bar,
+    .search__cart-list::before,
+    .footer-policy__link {
+        display: none;
+    }
+
+    .main {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .header,
+    .search {
+        height: 68px;
+    }
+
+    .header {
+        position: fixed;
+    }
+
+    .search__cart {
+        margin: 0 0 0 20px;
+    }
+
+    .search__cart-list {
+        position: fixed;
+        top: 68px;
+        right: 0;
+        width: 100%;
+        transform-origin: 50% top;
+        animation: fadeIn linear 0.2s;
+    }
+    
+    .search__cart-list-content {
+        height: 25vh;
+    }
+
+    .search__cart-list-header {
+        margin-left: 62px;
+    }
+    
+    .navbar__notify-link, .search__cart-item-link {
+        margin-left: 52px;
+        margin-right: 52px;
+    }
+
+    .search__cart-list-footer-btn {
+        margin-right: 40px;
+    }
+
+    .header-sort-bar {
+        display: flex;
+    }
+
+    .container {
+        margin-top: 116px;
+        padding-top: 5px;
+    }
+
+    .footer-branch {
+        justify-content: center;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .footer-stamp,
+    .footer-countries {
+        display: none;
+    }
+
+    .search {
+        margin: 0 20px;
+    }
+
+    .search__history {
+        position: fixed;
+        width: 100%;
+        top: 68px;
+        bottom: 0;
+        left: 0;
+    }
+
+    .content-product .row {
+        margin-left: 5px !important;
+        margin-right: 5px !important;
+    }
+
+    .content-page-control {
+        margin: 30px 0;
+    }
+
+    .content-page-control .btn{
+        margin: 0;
+        font-size: 1.4rem;
+        min-width: 36px;
+        height: 27px;
+    }
+
+    .footer-space {
+        height: 50px;
+    }
+    
+    .footer .row {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .footer .col {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .footer-follow {
+        display: inline-block;
+        margin-right: 12px;
+    }
+
+    .footer-heading:first-child {
+        margin-top: 20px;
+    }
+
+    .footer-branch {
+        padding: 30px 0;
+    }
+    
+    .footer-policy {
+        padding-top: 20px;
+    }
+
+    .footer-policy span {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+}

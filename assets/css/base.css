@@ -1,0 +1,189 @@
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cursor-default {
+    cursor: default;
+}
+
+.cursor-text {
+    cursor: text;
+}
+
+.ml-4 {
+    margin-left: 4px;
+}
+
+.mr-4 {
+    margin-right: 4px;
+}
+
+.ml-10 {
+    margin-left: 10px;
+}
+
+.mr-10 {
+    margin-right: 10px;
+}
+
+/* Number badge */
+.number-badge {
+    position: absolute;
+    color: #ee4d2d;
+    background-color: #fff;
+    font-size: 1.3rem;
+    height: 19px;
+    width: 19px;
+    line-height: 19px;
+    text-align: center;
+    border: 1px solid #ee4d2d;
+    border-radius: 50%;
+    display: none;
+}
+
+.number-badge.show {
+    display: block;
+}
+
+/* Line Or */
+.line-or {
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.line {
+    height: 1px;
+    width: 100%;
+    background-color: #dbdbdb;
+    flex: 1;
+}
+
+.line-or span {
+    color: #ccc;
+    padding: 0 16px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+/* Button */
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 2px;
+    background-color: #fff;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0,0,0,0.2);
+}
+
+.btn.btn--primary {
+    color: #fff;
+    background-color: #fb5533;
+}
+
+.btn--primary:hover {
+    border: none;
+    background-color: #fb6445;
+}
+
+/* Input */
+.input--primary {
+    width: 100%;
+    height: 40px;
+    padding: 12px;
+    margin-bottom: 12px;
+    font-size: 1.4rem;
+    border: 1px solid rgba(0, 0, 0, 0.14);
+    border-radius: 2px;
+    outline: none;
+}
+
+.input--primary:focus {
+    border-color: rgba(0, 0, 0, 0.541);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.14);
+}
+
+/* Icon */
+.facebook-icon {
+    background-image: url(../images/social-icons.png);
+    background-position: 5.55556% 62.6667%;
+    background-size: 325% 287.5%;
+    width: 22px;
+    height: 22px;
+}
+.google-icon {
+    background-image: url(../images/social-icons.png);
+    background-position: 83.9286% 5.15464%;
+    background-size: 722.222% 638.889%;
+    width: 22px;
+    height: 22px;
+}
+
+.apple-icon {
+    background-image: url(../images/social-icons.png);
+    background-position: 5.10204% 6.0241%;
+    background-size: 406.25% 359.375%;
+    width: 22px;
+    height: 22px;
+}
+
+.facebook-icon,
+.google-icon,
+.apple-icon {
+    display: inline-block;
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    align-items: center;
+    justify-content: center;
+    display: none;
+    z-index: 999;
+}
+
+.modal__container {
+    position: relative;
+    transform-origin: 50% 20%;
+    animation: growIn linear .3s;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes growIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    } to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
