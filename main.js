@@ -50,29 +50,29 @@ const loginBtn = document.querySelector(".js-login");
 const logOutBtn = document.querySelector(".js-log-out");
 const loginLogOutBtns = document.querySelectorAll(".js-display-not-login");
 const userInfo = document.querySelector(".js-display-login");
-const numberBadges = document.querySelectorAll(".js-number-badge")
+const numberBadges = document.querySelectorAll(".js-number-badge");
 
 function displayLogin() {
     notify.classList.remove("navbar__notify--not-login");
     cart.classList.remove("search__cart-list--no-cart");
     for (const loginLogOutBtn of loginLogOutBtns) {
         loginLogOutBtn.classList.remove("log-out");
-    };
+    }
     userInfo.classList.add("login");
-    for ( const numberBadge of numberBadges ) {
+    for (const numberBadge of numberBadges) {
         numberBadge.classList.add("show");
-    };
+    }
 }
 function displayNotLogin() {
     notify.classList.add("navbar__notify--not-login");
     cart.classList.add("search__cart-list--no-cart");
     for (const loginLogOutBtn of loginLogOutBtns) {
         loginLogOutBtn.classList.add("log-out");
-    };
+    }
     userInfo.classList.remove("login");
-    for ( const numberBadge of numberBadges ) {
+    for (const numberBadge of numberBadges) {
         numberBadge.classList.remove("show");
-    };
+    }
 }
 
 loginBtn.addEventListener("click", displayLogin);
