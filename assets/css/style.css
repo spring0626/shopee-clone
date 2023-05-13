@@ -381,23 +381,75 @@
     color: #fb5533;
 }
 
-/* Modal login */
-.modal-sign-up.sign-up,
-.modal-login.login {
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    align-items: center;
+    justify-content: center;
     display: flex;
+    z-index: 999;
+    transform: scale(0);
+}
+
+.modal.sign-up,
+.modal.login {
+    transform: scale(1);
 }
 
 .modal__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
     background-color: #fff;
     border-radius: 2px;
     box-shadow: 0 0 9px rgba(0, 0, 0, 0.2);
-    width: 450px;
+    width: 400px;
+    height: 350px;
+    transform: scale(0);
     overflow: hidden;
+    transition: height 0.2s ease, transform 0.5s ease;
 }
 
-.login .modal__container {
-    width: 400px;
+.modal.sign-up .modal__container,
+.modal.login .modal__container {
+    transform: scale(1);
 }
+
+.modal.sign-up .modal__container {
+    height: 450px;
+}
+
+.modal__container .modal-sign-up,
+.modal__container .modal-login {
+    position: absolute;
+}
+
+.sign-up .modal-sign-up {
+    transition: transform 0.18s ease;
+    transform: translateX(0);
+}
+
+.sign-up .modal-login {
+    transition: none;
+    transform: translateX(400px);
+}
+
+.login .modal-sign-up {
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.login .modal-login {
+    transition: transform 0.18s ease;
+    transform: translateX(0);
+}
+
 
 .modal__header {
     display: flex;

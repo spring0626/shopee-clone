@@ -1,47 +1,45 @@
 // Modal
 const showSignUp = document.querySelector(".js-show-sign-up");
 const showLogin = document.querySelector(".js-show-login");
-const modalSignUp = document.querySelector(".js-modal-sign-up");
-const modalLogin = document.querySelector(".js-modal-login");
-const modalContainers = document.querySelectorAll(".js-modal__container");
+const modal = document.querySelector(".js-modal");
+const modalContainer = document.querySelector(".js-modal__container");
 const modalCloses = document.querySelectorAll(".js-close-modal-btn");
 const switchSignUp = document.querySelector(".js-modal__switch-sign-up");
 const switchLogin = document.querySelector(".js-modal__switch-login");
 
-function showModalSignUp() {
-    modalSignUp.classList.add("sign-up");
-}
-function showModalLogin() {
-    modalLogin.classList.add("login");
-}
-function hideModal() {
-    modalSignUp.classList.remove("sign-up");
-    modalLogin.classList.remove("login");
-}
-function switchModalSignUp() {
-    modalSignUp.classList.add("sign-up");
-    modalLogin.classList.remove("login");
-}
-function switchModalLogin() {
-    modalLogin.classList.add("login");
-    modalSignUp.classList.remove("sign-up");
-}
+showSignUp.addEventListener("click", () => {
+    modal.classList.add("sign-up");
+});
 
-showSignUp.addEventListener("click", showModalSignUp);
-showLogin.addEventListener("click", showModalLogin);
-modalSignUp.addEventListener("click", hideModal);
-modalLogin.addEventListener("click", hideModal);
-switchSignUp.addEventListener("click", switchModalSignUp);
-switchLogin.addEventListener("click", switchModalLogin);
+showLogin.addEventListener("click", () => {
+    modal.classList.add("login");
+});
 
 for (const modalClose of modalCloses) {
-    modalClose.addEventListener("click", hideModal);
-}
-for (const modalContainer of modalContainers) {
-    modalContainer.addEventListener("click", function (event) {
-        event.stopPropagation();
+    modalClose.addEventListener("click", () => {
+        modal.classList.remove("login");
+        modal.classList.remove("sign-up");
     });
 }
+
+modal.addEventListener("click", () => {
+    modal.classList.remove("login");
+    modal.classList.remove("sign-up");
+});
+
+modalContainer.addEventListener("click", function (event) {
+    event.stopPropagation();
+});
+
+switchSignUp.addEventListener("click", () => {
+    modal.classList.remove("login");
+    modal.classList.add("sign-up");
+});
+
+switchLogin.addEventListener("click", () => {
+    modal.classList.remove("sign-up");
+    modal.classList.add("login");
+});
 
 // Switch login, logout
 const notify = document.querySelector(".js-navbar__notify");
